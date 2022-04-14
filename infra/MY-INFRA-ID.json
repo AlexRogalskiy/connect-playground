@@ -1,0 +1,25 @@
+{
+    "name" : "Write a Source Connector",
+    "virtual_machine_ami_tag" : {
+        "us-west-2" : "PROD CP 6.0",
+        "ap-southeast-2" : "PROD CP 6.0",
+        "eu-central-1" : "PROD CP 6.0",
+        "ap-south-1": "PROD CP 6.0"
+      },
+    "virtual_machine_type" : "m5.xlarge",
+    "virtual_machine_startup" : [
+        "#!/bin/bash",
+        "su training <<'EOF'",
+        "exercise_download.sh DEV-ESTR-connSrc-introduction.zip introduction.html \"00-Introduction\"",
+        "exercise_download.sh DEV-ESTR-connSrc-module-1.zip module-1.html \"01-Designing a Source Connector\"",
+        "exercise_download.sh DEV-ESTR-connSrc-module-2.zip module-2.html \"02-Writing the Source Connector\"",
+        "exercise_download.sh DEV-ESTR-connSrc-module-3.zip module-3.html \"03-Connect Cluster and Rebalance\"",
+        "source_download.sh DEV-ESTR-connSrc-src.zip /home/training/my-course",
+        "EOF",
+        "echo started warming $(date) >> ebs_warming.txt",
+        "dd if=/dev/nvme0n1 of=/dev/null bs=1M",
+        "echo ended warming $(date) >> ebs_warming.txt"
+    ],
+    "guac_access" : "rdp",
+    "session_duration_terminate" : "2hours"
+}

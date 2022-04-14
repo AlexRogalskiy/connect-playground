@@ -1,0 +1,235 @@
+= AsciiDoctor Reference
+:imagesdir: images/
+:source-highlighter: rouge
+:icons: font
+
+{sp} +
+{sp} +
+{sp} +
+{sp} +
+
+image::color_logo.png[align="center",pdfwidth=75%]
+
+// this is an asciidoc comment
+
+
+
+
+
+== AsciiDoc Documentation
+
+This document is an ok primer on the Asciidoctor text processor, but if you need more help, check out the https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc Documentation, window="_blank"]!
+
+NOTE: In the raw adoc file, notice the `window="_blank"` attribute for the link above. This will make it so the link will be opened in a new tab when the user clicks on it. As a shorthand, you can just use an `^` instead! For example, check out the https://docs.asciidoctor.org/asciidoc/latest/macros/link-macro-attribute-parsing/#blank-window-shorthand[docs^]
+
+
+
+
+
+== This is a Subtitle
+
+This is a paragraph of regular text.
+
+This is a paragraph with a *bold* word and an _italicized_ word. *_Bold italic_* is also possible.
+
+Words can also have internal b**ol**d and it__ali__c formatting.
+
+Some constrained `monospace text`, and some ``u``nconstrained ``m``onospace ``t``ext. Let's keep adding to this line so that it wraps around and then we hit it with some code like this `bootstrap.servers` and then more stuff
+
+* `starts with code` and then non code
+** non code and then `code` and some more +
+`code`
+
+Some Superscript^®^ text and some subscript text: H~2~O.
+
+ifeval::["{artifact-type}" == "IG"]
+---
+*Instructor note*: This can be seen by instructors.
+endif::[]
+
+ifdef::artifact-type[]
+---
+This can be seen by students and instructors.
+endif::artifact-type[]
+
+
+
+== Code
+
+Java source code with numbered lines:
+
+[source,java,numbered]
+----
+KafkaStreams streams = new KafkaStreams(builder.build(), config);
+streams.start();
+----
+
+Bash command with bash highlighting:
+
+[source,bash]
+----
+$ cat <<EOF > text.txt \
+      hello
+      kafka
+      my
+      old
+      friend
+EOF
+----
+
+Bash command using bold
+
+[subs="verbatim,quotes"]
+----
+$ *./my-cool-script.sh*
+
+terminal output from your cool script
+----
+
+
+
+== Lists
+
+=== Unordered lists
+
+.Unordered list title
+* list item 1
+** nested list item
+*** nested nested list item 1
+*** nested nested list item 2
+* list item 2
+
+=== Ordered lists
+
+.Ordered list title
+. ordered list item
+.. nested ordered list item
+. ordered list item
+.. second level list item
+... third level list item
+... another third level list item
+... a final third level list item
+.. another second level list item
+
+=== Labelled lists
+
+Here's an example of a labeled list that identifies parts of a computer:
+
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+Keyboard:: Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+Monitor:: Displays information in visual form using text and graphics.
+
+.A horizontal labelled list
+[horizontal]
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+
+.Labelled list with bullets
+Diary::
+* Milk
+* Eggs
+Bakery::
+* Bread
+Produce::
+* Bananas
+
+=== Mixed lists
+
+.Mixed unordered and ordered lists
+. Linux
+* Fedora
+* Ubuntu
+* Slackware
+. BSD
+* FreeBSD
+* NetBSD
+
+Here’s a list that mixes all three types of lists:
+
+Operating Systems::
+  . Linux
+    * Fedora
+    * Ubuntu
+    * Slackware
+  . BSD
+    * FreeBSD
+    * NetBSD
+Cloud Providers::
+  . PaaS
+    * OpenShift
+    * CloudBees
+  . IaaS
+    * Amazon EC2
+    * Rackspace
+
+
+
+== Tables
+
+[grid=none,frame=none,cols="a,a"]
+|===
+|
+Start with ksqlDB when...
+
+* You don't use Java/Scala
+* You are new to streaming or Kafka
+* You prefer a UI or REST API
+* You can achieve stream processing and state querying use case with KSQL syntax
+
+|
+Start with Kafka Streams when ...
+
+* You already use Java/Scala
+* You need tight control over performance
+* You prefer the deployment flexibility of using a Java Library
+* You need custom logic that can't be described with KSQL syntax
+|===
+
+[options="header",cols="a,2a"]
+|===
+| column 1 header | column 2 header
+| a | b
+| `c` | * d
+| Can you do images in a table? | image::learning-objectives.svg[width=20%]
+|===
+
+== Collapsible Content
+
+.hidden secret
+[%collapsible]
+====
+You're awesome.
+====
+
+== Admonitions
+
+TIP: This is a tip. There are five admonition labels: Tip, Note, Important, Caution and Warning.
+
+NOTE: This is a note.
+
+IMPORTANT: This is important.
+
+CAUTION: Caution -- be careful!
+
+WARNING: This is a warning.
+
+=== Admonition blocks
+
+[NOTE]
+.A "NOTE" type admonition
+====
+This is an example of an admonition block.
+
+Unlike an admonition paragraph, it may contain any AsciiDoc content.
+The style can be any one of the admonition labels:
+
+* NOTE
+* TIP
+* WARNING
+* CAUTION
+* IMPORTANT
+====

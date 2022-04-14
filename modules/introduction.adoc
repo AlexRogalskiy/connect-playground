@@ -1,0 +1,82 @@
+:imagesdir: ../images/
+:source-highlighter: rouge
+:icons: font
+
+
+
+
+= Managing Access to Confluent Platform with Role Based Access Control
+
+
+{sp} +
+{sp} +
+{sp} +
+
+
+image::color_logo.png[align="center",pdfwidth=75%]
+
+
+
+== Copyright and Trademarks
+
+{sp}+
+{sp}+
+{sp}+
+{sp}+
+{sp}+
+
+[.text-center]
+Copyright © Confluent, Inc. 2014-2021. https://www.confluent.io/confluent-privacy-statement/[Privacy Policy] | https://www.confluent.io/terms-of-use/[Terms & Conditions]. +
+Apache, Apache Kafka, Kafka and the Kafka logo are trademarks of the +
+http://www.apache.org/[Apache Software Foundation]
+
+
+== Product Story
+
+Put an image here
+
+
+---
+What is the “big picture” here? What are the use cases? Why are we doing this? Why is this relevant? Should be informed/aligned with https://docs.google.com/spreadsheets/d/1rLFQDGta9qb2ri5fRQhK9WJemoQ0x1SLfGPzRqBhamo/edit#gid=0[company messaging].
+
+This introduction should be a few slides to set the context for the product and for the story told through this training.
+
+
+== Course Narrative
+
+Helpful image
+
+---
+What is the story that is told through the modules?
+
+
+
+== Course Objectives
+
+
+
+[cols="5a,1a,14a",grid="none",frame="none"]
+|===
+|
+
+{sp}+
+{sp}+
+
+image::learning-objectives.svg[pdfwidth=90%]
+|
+|
+By completing the labs and activities in this course, you will be able to *Name of the course*.
+// The name of the course is already designed to be based on a task the person wants to accomplish, so it is essentially the main objective of the course spelled out.
+
+To accomplish this task, you will:
+
+* objective
+* objective
+* objective
+
+Resources for crafting objectives: 
+
+* http://www.nwlink.com/~donclark/hrd/isd/develop_objective.html
+* https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/#:~:text=Familiarly%20known%20as%20Bloom's%20Taxonomy,Analysis%2C%20Synthesis%2C%20and%20Evaluation[Bloom's Taxonomy of Educational Objectives]
+
+|===

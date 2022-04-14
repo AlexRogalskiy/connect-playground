@@ -1,0 +1,12 @@
+:imagesdir: ../images/
+:source-highlighter: rouge
+:icons: font
+
+
+= Summary
+
+Bring back a couple of key slides and come back to the course objectives
+
+== References
+
+* Make sure to use https://docs.asciidoctor.org/asciidoc/latest/macros/link-macro-attribute-parsing/#blank-window-shorthand[attribute parsing^] with attribute `window="_blank"` to ensure the link opens in a new tab.
