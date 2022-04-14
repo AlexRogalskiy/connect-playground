@@ -1,9 +1,0 @@
----
-- name: "Provision confluent platform image"
-  hosts: default
-  become: yes
-  tasks:
-    - name: "Run installer script"
-      script:
-        cmd: installer.sh
-        chdir: /home/training
